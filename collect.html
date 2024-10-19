@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data Collection Form</title>
+    <link rel="stylesheet" href="collect.css">
+
+<style>
+
+
+
+
+
+
+
+</style>
+
+
+</head>
+<body>
+    <div class="container">
+        <h2>User Data Collection Form</h2>
+        <form action="processcollect.php" method="POST" enctype="multipart/form-data">
+            <!-- Name Input -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+            <!-- Email Input -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+            <!-- Age Input -->
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="1" max="120" required placeholder="Enter your age">
+
+            <!-- Gender Selection -->
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">--Select Gender--</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <!-- Bio Textarea -->
+            <label for="bio">Bio:</label>
+            <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+
+            <!-- CV Upload -->
+            <label for="cv">Upload CV:</label>
+            <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
